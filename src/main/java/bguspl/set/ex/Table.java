@@ -110,7 +110,11 @@ public class Table {
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
-
+        
+        //myCode
+        Integer cardToRemove = slotToCard[slot];
+        slotToCard[slot] = null; //TODO - see if its supposed to be null or something else
+        cardToSlot[cardToRemove] = null; //TODO - see if its supposed to be null or something else
         // TODO implement
     }
 
